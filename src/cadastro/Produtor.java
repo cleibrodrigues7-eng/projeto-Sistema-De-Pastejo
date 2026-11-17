@@ -3,14 +3,24 @@ package cadastro;
 import java.io.Serializable;
 
 public class Produtor implements Serializable {
+    private int idProdutor;
     private String nome;
     private String telefone;
     private String cpf;
 
-    public Produtor(String nome, String telefone, String cpf) {
+    public Produtor(int idProdutor, String nome, String telefone, String cpf) {
+        this.idProdutor = idProdutor;
         this.nome = nome;
         this.telefone = telefone;
         this.cpf = cpf;
+    }
+
+    public int getIdProdutor() {
+        return idProdutor;
+    }
+
+    public void setIdProdutor(int idProdutor) {
+        this.idProdutor = idProdutor;
     }
 
     public String getNome() {
@@ -37,12 +47,8 @@ public class Produtor implements Serializable {
         this.cpf = cpf;
     }
 
-    public Produtor cadastrar() {
-        return null;
-    }
-
-
+    // CORRETO: Salva apenas o valor numérico de idProdutor
     public String toCSV() {
-        return nome + ";" + telefone + ";" + cpf;
+        return idProdutor + ";" + nome + ";" + telefone + ";" + cpf;
     }
 }

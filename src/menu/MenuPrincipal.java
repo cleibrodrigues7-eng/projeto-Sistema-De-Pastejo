@@ -1,5 +1,4 @@
 package menu;
-
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -34,8 +33,9 @@ public class MenuPrincipal {
                         MenuAnimal.gerenciar(sc);
                         break;
                     case 4:
-                        System.out.println("\n--- Controle de Rotação ---");
+                       MenuRotacao.gerenciar(sc);
                         break;
+
                     case 0:
                         System.out.println("\nSaindo....");
                         break;
@@ -51,4 +51,5 @@ public class MenuPrincipal {
         } while (opcao != 0);
 
     }
+
 }

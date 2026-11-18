@@ -3,41 +3,51 @@ package cadastro;
 import java.io.Serializable;
 
 public class Piquete implements Serializable {
-    private String idPiquete;
-    private String capim;
-    private double tamanho;
+    private int idPiquete;
+    private String identificacao;
+    private double areaHectares;
+    private int capacidadeAnimais;
 
-    public Piquete(String idPiquete, String capim, double tamanho) {
+    public Piquete(int idPiquete, String identificacao, double areaHectares, int capacidadeAnimais) {
         this.idPiquete = idPiquete;
-        this.capim = capim;
-        this.tamanho = tamanho;
+        this.identificacao = identificacao;
+        this.areaHectares = areaHectares;
+        this.capacidadeAnimais = capacidadeAnimais;
     }
 
-    public String getCapim() {
-        return capim;
-    }
-
-    public void setCapim(String capim) {
-        this.capim = capim;
-    }
-
-    public double getTamanho() {
-        return tamanho;
-    }
-
-    public void setTamanho(double tamanho) {
-        this.tamanho = tamanho;
-    }
-
-    public String getIdPiquete() {
+    public int getIdPiquete() {
         return idPiquete;
     }
 
-    public void setIdPiquete(String idPiquete) {
+    public void setIdPiquete(int idPiquete) {
         this.idPiquete = idPiquete;
     }
 
+    public String getIdentificacao() {
+        return identificacao;
+    }
+
+    public void setIdentificacao(String identificacao) {
+        this.identificacao = identificacao;
+    }
+
+    public double getAreaHectares() {
+        return areaHectares;
+    }
+
+    public void setAreaHectares(double areaHectares) {
+        this.areaHectares = areaHectares;
+    }
+
+    public int getCapacidadeAnimais() {
+        return capacidadeAnimais;
+    }
+
+    public void setCapacidadeAnimais(int capacidadeAnimais) {
+        this.capacidadeAnimais = capacidadeAnimais;
+    }
+
     public String toCSV() {
-        return idPiquete + ";" + capim + ";" + tamanho;
+        return idPiquete + ";" + identificacao + ";" + areaHectares + ";" + capacidadeAnimais;
     }
 }
